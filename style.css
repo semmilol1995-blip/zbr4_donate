@@ -615,3 +615,45 @@ body {
     width: 100%;
   }
 }
+
+
+@media (max-width: 600px) {
+
+  /* ❌ прибрали важкі штуки */
+  .inner::before,
+  .inner::after {
+    display: none;
+  }
+
+  /* 🔥 новий фон */
+  .inner {
+    background:
+      radial-gradient(circle at 30% 20%, rgba(124,58,237,0.25), transparent 60%),
+      radial-gradient(circle at 80% 70%, rgba(179,83,215,0.25), transparent 60%),
+      linear-gradient(145deg, #18181d, #121216);
+
+    backdrop-filter: none;
+
+    border: 1px solid rgba(124,58,237,0.15);
+  }
+
+  /* трохи живості без лагів */
+  .inner:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(124,58,237,0.25);
+  }
+
+  /* crypto теж легший */
+  .crypto ul {
+    background:
+      linear-gradient(145deg, #18181d, #121216);
+
+    backdrop-filter: none;
+    border: 1px solid rgba(124,58,237,0.1);
+  }
+}
+
+.inner,
+.crypto ul {
+  transform: translateZ(0);
+}
